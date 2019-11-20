@@ -77,7 +77,7 @@ class Switch:
         self.discards = [self.stock.pop()]
         # deal hands
         for player in self.players:
-            self.pick_up_card(player, HAND_SIZE)
+            self.pick_up_card(player, HAND_SIZE + 1)
         # set game flags to initial value
         self.direction = 1
         self.skip = False
