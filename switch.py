@@ -54,7 +54,9 @@ class Switch:
 
         i = 0 # current player index
         while True:
-            # process current player's turn 
+            # process current player's turn
+            if i > len(self.players) - 1:
+                i = 0
             won = self.run_player(self.players[i])
             if won:
                 break
