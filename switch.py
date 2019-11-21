@@ -159,7 +159,7 @@ class Switch:
         sufficient, the maximum possible number of cards is picked.
         """
         # repeat n times
-        for i in range(1, n):
+        for i in range(0, n):
             # if no more card in stock pile
             if not self.stock:
                 # add back discarded cards (but not top card)
@@ -175,7 +175,7 @@ class Switch:
             card = self.stock.pop()
             # and add to hand
             player.hand.append(card)
-        return i
+        return i + 1
 
     def can_discard(self, card):
         """Return whether card can be discarded onto discard pile."""
