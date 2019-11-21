@@ -62,7 +62,7 @@ class Switch:
                 break
             else:
                 # advance player index depending on self.direction
-                i = i+self.direction % len(self.players)
+                i = i+self.direction
         UI.print_winner_of_game(self.players[i])
 
     def setup_round(self):
@@ -105,17 +105,18 @@ class Switch:
         # apply any pending penalties (skip, draw2, draw4)
         if self.skip:
             # return without performing any discard
-            self.skip == False
+            self.skip = False
             UI.print_message('{} is skipped.'.format(player.name))
+            return False
         elif self.draw2:
             # draw two cards
             picked = self.pick_up_card(player, 2)
-            self.draw2 == False
+            self.draw2 = False
             UI.print_message('{} draws {} cards.'.format(player.name, picked))
         elif self.draw4:
             # draw four cards
             picked = self.pick_up_card(player, 4)
-            self.draw4 == False
+            self.draw4 = False
             UI.print_message('{} draws {} cards.'.format(player.name, picked))
 
         top_card = self.discards[-1]

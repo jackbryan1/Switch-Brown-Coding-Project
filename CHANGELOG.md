@@ -1,8 +1,10 @@
 # CHANGELOG
 
+* v1.1.1 [2019-11-21]: Playing an 8 will now actually skip the next player
+
 * v1.1.1 [2019-11-21]: Direction now reverses when a king is played
 
-* v1.1.1 [2019-11-21]: Game now only allows cards toi be discarded if they can actually be discarded
+* v1.1.1 [2019-11-21]: Game now only allows cards to be discarded if they can actually be discarded
 
 * v1.1.1 [2019-11-21]: Fixed a bug where game would always crash after 1 turn
 
