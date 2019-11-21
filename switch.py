@@ -123,7 +123,7 @@ class Switch:
         UI.print_player_info(player, top_card, hand_sizes)
 
         # determine discardable cards
-        discardable = [card for card in player.hand if self.can_discard]
+        discardable = [card for card in player.hand if self.can_discard(card)]
 
         # have player select card
         hands = self.get_normalized_hand_sizes(player)
@@ -184,7 +184,7 @@ class Switch:
         # otherwise either suit or value has to match with top card
         else:
             top_card = self.discards[-1]
-            return card.suit == top_card.suit and card.value == top_card.value
+            return card.suit == top_card.suit or card.value == top_card.value
 
     def draw_and_discard(self, player):
         """Draw a card from stock and discard it if possible.
