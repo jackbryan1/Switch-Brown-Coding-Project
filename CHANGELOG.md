@@ -1,5 +1,7 @@
 # CHANGELOG
 
+* v1.1.1 [2019-11-25]: Fixed a bug where a 4 would result in the next player drawing 2 cards instead of a 2 causing this 
+
 * v1.1.1 [2019-11-25]: Card deck now has the correct number of aces
 
 * v1.1.1 [2019-11-21]: Fixed a crash when no cards could be played
