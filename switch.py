@@ -79,7 +79,7 @@ class Switch:
         self.discards = [self.stock.pop()]
         # deal hands
         for player in self.players:
-            self.pick_up_card(player, HAND_SIZE + 1)
+            self.pick_up_card(player, HAND_SIZE)
         # set game flags to initial value
         self.direction = 1
         self.skip = False
@@ -259,7 +259,7 @@ class Switch:
         sizes = [len(p.hand) for p in self.players]
         idx = self.players.index(player)
         # rotate list so that given player is first
-        sizes = sizes[:idx] + sizes[idx:]
+        sizes = sizes[idx:] + sizes[:idx]
         # if direction is counter-clockwise, reverse the order and
         # bring given player back to the front
         if self.direction == -1:

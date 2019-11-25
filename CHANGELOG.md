@@ -1,5 +1,13 @@
 # CHANGELOG
 
+* v1.1.1 [2019-11-25]: Fixed wrong hand size
+
+* v1.1.1 [2019-11-25]: Fixed normalised hand size indexes
+
+* v1.1.1 [2019-11-25]: Fixed a bug in the test environment where a test was checking for discarding a 4 not a 2 and was asserting 3 not 2
+
+* v1.1.1 [2019-11-25]: Fixed a bug in the test environment where a test for discarding aces was checking for a king
+
 * v1.1.1 [2019-11-25]: Fixed a bug where a 4 would result in the next player drawing 2 cards instead of a 2 causing this 
 
 * v1.1.1 [2019-11-25]: Card deck now has the correct number of aces

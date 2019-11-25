@@ -63,10 +63,10 @@ def test_pick_up_card__pick_correct_number():
     assert len(player.hand) == 5
     assert len(s.stock) == 1
 
-    picked = s.pick_up_card(player, 4)
-    assert picked == 3
-    assert len(player.hand) == 8
-    assert len(s.stock) == 0
+    picked = s.pick_up_card(player, 2)
+    assert picked == 2
+    assert len(player.hand) == 7
+    assert len(s.stock) == 1
 
 
 def test_can_discard__follows_suit():
